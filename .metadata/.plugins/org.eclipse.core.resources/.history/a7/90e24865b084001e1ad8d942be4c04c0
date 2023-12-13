@@ -1,0 +1,67 @@
+package com.adactin;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class AdactinClass {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\ABISAAC\\eclipse-workspace\\Selenium_Concept\\driver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://adactinhotelapp.com/");
+		driver.manage().window().maximize();
+		WebElement user = driver.findElement(By.xpath("//input[@name='username']"));
+		user.sendKeys("shalom123");
+		WebElement pass = driver.findElement(By.xpath("//input[@name='password']"));
+		pass.sendKeys("Buelah@12");
+		WebElement login = driver.findElement(By.xpath("//input[@name='login']"));
+		login.click();
+		
+		WebElement drop = driver.findElement(By.xpath("//select[@name='location']"));
+		Select select= new Select(drop);
+		select.selectByIndex(5);
+		
+		WebElement down = driver.findElement(By.xpath("//select[@name='hotels']"));
+		Select dropdown=new Select(down);
+		dropdown.selectByIndex(1);
+		
+		WebElement drop1 = driver.findElement(By.xpath("//select[@name='room_type']"));
+		Select a=new Select(drop1);
+		a.selectByValue("Double");
+		
+		WebElement drop3=driver.findElement(By.xpath("//select[@id='room_nos']"));
+		Select c=new Select(drop3);
+		c.selectByVisibleText("6 - Six");
+		
+		WebElement down4 = driver.findElement(By.xpath("//input[@value='16/11/2023']"));
+		down4.clear();
+		down4.sendKeys("18-10-2022");
+		
+		WebElement down5 = driver.findElement(By.xpath("//input[@name='datepick_out']"));
+		down5.clear();
+		down5.sendKeys("24-10-2022");
+		
+		WebElement drop6=driver.findElement(By.xpath("//select[@name='adult_room']"));
+		Select e=new Select(drop6);
+		e.selectByVisibleText("2 - Two");
+		
+		WebElement down6 = driver.findElement(By.xpath("//select[@name='child_room']"));
+		Select f=new Select(down6);
+		f.selectByIndex(1);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				
+	}
+
+}

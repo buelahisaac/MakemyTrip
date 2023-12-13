@@ -1,0 +1,12 @@
+package com.student;
+
+public class Student_details {
+	public void StudentName() {
+		System.out.println("Buelah Aron");
+	}
+	public void StudentId() {
+		System.out.println("678");
+		
+	}
+
+}

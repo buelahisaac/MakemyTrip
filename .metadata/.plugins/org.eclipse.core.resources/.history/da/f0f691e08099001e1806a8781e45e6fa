@@ -1,0 +1,11 @@
+package com.TestNG;
+
+public class TestNGClass {
+	
+    @Te
+	public void 	browserLaunch()
+	{
+		
+	}
+
+}
